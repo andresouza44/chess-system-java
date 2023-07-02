@@ -1,12 +1,19 @@
 package boardgame;
 
+import chess.Color;
+
 public abstract class Piece {
     protected Position position;
     private Board board;
+    private Color color;
 
     public Piece(Board board) {
         this.board = board;
         this.position = null;
+    }
+
+    public Color getColor() {
+        return color;
     }
 
     protected Board getBoard() {
