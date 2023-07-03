@@ -2,8 +2,6 @@ package chess;
 
 import boardgame.Position;
 
-import java.awt.*;
-
 public class ChessPosition {
     private char column;
     private int row;
@@ -13,7 +11,7 @@ public class ChessPosition {
 
     public ChessPosition(char column, int row) {
         if (column < 'a' || column > 'h' || row < 0 || row > 8) {
-            throw new ChessExecption("Error instantiating ChessPositon.Valid values are from a1 to h8 ");
+            throw new ChessException("Error instantiating ChessPositon.Valid values are from a1 to h8 ");
         }
         this.column = column;
         this.row = row;
@@ -32,7 +30,7 @@ public class ChessPosition {
     }
 
     protected static ChessPosition fromPosition(Position position) {
-        return new ChessPosition((char) ('a' - position.getColumn()), 8 - position.getRow());
+        return new ChessPosition((char) ('a' + position.getColumn()), 8 - position.getRow());
     }
 
     @Override

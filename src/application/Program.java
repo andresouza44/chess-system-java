@@ -1,6 +1,6 @@
 package application;
 
-import chess.ChessExecption;
+import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
@@ -40,7 +40,7 @@ public class Program {
                 }
 
             }
-            catch (ChessExecption e) {
+            catch (ChessException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
 
